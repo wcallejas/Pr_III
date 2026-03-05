@@ -1,0 +1,84 @@
+/*Punto 1*/
+.p1_azul{
+    color: blue;
+}
+.p1_rojo{
+    color: red;
+}
+
+/*Punto 2*/
+.p2_green_ul{
+    text-decoration: underline;
+    color: green;
+}
+.p2_red{
+    color: red;
+    font-weight: bold;
+}
+.p2_uo{
+    text-decoration: underline overline;
+}
+.p2_big{
+    font-size: 40px;
+    font-weight: bold;
+}
+.p2_blue{
+    color:blue;
+    font-weight: bold;
+}
+.p2_red_u{
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+}
+/*Punto 3*/
+.p3_purple{
+    font-size: 20px;
+    color: purple;
+    display: block;
+}
+.p3_yellow{
+    color:chocolate;
+    font-size: 20px;
+}
+/*Punto 4*/
+.p4_nav{
+    background-color: indianred;
+}
+.p4_nav ul{
+    display: inline-flex;
+}
+.p4_nav li{
+    padding: 10px;
+    list-style: none;
+}
+.p4_nav li:hover{
+    background-color: aqua;
+}
+.p4_nav a{
+    color: white;
+}
+/*Punto 5*/
+.p5_table{
+    background-color: darkorange;
+    border-top: 1px dotted;
+    border-bottom: 2px red dashed;
+    border-spacing: 0px;
+}
+.p5_table thead th{
+    color: red;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.p5_table thead th::first-letter{
+    font-size: 18px;
+    font-weight: bold;
+}
+.p5_table td{
+    border: 1px dotted;
+}
+.p5_table tr{
+    padding: 0px;
+    margin: 0px;
+}
