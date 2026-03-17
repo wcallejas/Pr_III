@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Etiquetas HTML - Plantilla Educativa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/plantilla.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-code"></i> Guía de Etiquetas HTML</h1>
+            <p>Ejemplos prácticos y explicaciones detalladas de las etiquetas HTML más utilizadas</p>
+        </header>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#texto" class="active">Etiquetas de Texto</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+                <li><a href="#estructura">Estructura</a></li>
+                <li><a href="#listas">Listas</a></li>
+                <li><a href="#tablas">Tablas</a></li>
+                <li><a href="#formularios">Formularios</a></li>
+            </ul>
+        </nav>
+        
+        <div class="tags-container">
+            <!-- Encabezados h1 a h6 -->
+            <div class="tag-card" id="texto">
+                <div class="tag-header">
+                    <h2><i class="fas fa-heading"></i> Encabezados &lt;h1&gt; a &lt;h6&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+                        <p>Los encabezados definen la estructura jerárquica del contenido. &lt;h1&gt; es el más importante (título principal) y &lt;h6&gt; el menos importante.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-cog"></i> Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>id</strong>: Identificador único para el elemento</li>
+                            <li><strong>class</strong>: Clase CSS para aplicar estilos</li>
+                            <li><strong>style</strong>: Estilos CSS en línea</li>
+                            <li><strong>title</strong>: Información adicional (se muestra al pasar el mouse)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-code"></i> Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Sección&lt;/h3&gt;
+&lt;h4&gt;Subsección&lt;/h4&gt;
+&lt;h5&gt;Apartado&lt;/h5&gt;
+&lt;h6&gt;Detalle&lt;/h6&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-paint-brush"></i> CSS asociado</h3>
+                        <div class="code-example">
+                            <pre><code>h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }</code></pre>
+                        </div>
+                        <p>Estas reglas establecen tamaños de fuente decrecientes para cada nivel de encabezado.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-eye"></i> Resultado visual</h3>
+                        <div class="visual-example">
+                            <h1>Título Principal</h1>
+                            <h2>Subtítulo</h2>
+                            <h3>Sección</h3>
+                            <h4>Subsección</h4>
+                            <h5>Apartado</h5>
+                            <h6>Detalle</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Párrafo <p> -->
+            <div class="tag-card">
+                <div class="tag-header">
+                    <h2><i class="fas fa-paragraph"></i> Párrafo &lt;p&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+                        <p>Define un párrafo de texto. Es la etiqueta más utilizada para contenido textual en una página web.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-cog"></i> Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>align</strong>: Alineación del texto (left, right, center, justify)</li>
+                            <li><strong>id</strong>: Identificador único</li>
+                            <li><strong>class</strong>: Clase CSS para estilos</li>
+                            <li><strong>style</strong>: Estilos CSS en línea</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-code"></i> Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
+&lt;p&gt;Otro párrafo con &lt;strong&gt;texto en negrita&lt;/strong&gt; 
+y &lt;em&gt;texto en cursiva&lt;/em&gt;.&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-paint-brush"></i> CSS asociado</h3>
+                        <div class="code-example">
+                            <pre><code>p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}</code></pre>
+                        </div>
+                        <p>Estas reglas mejoran la legibilidad con espaciado entre párrafos y altura de línea.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-eye"></i> Resultado visual</h3>
+                        <div class="visual-example">
+                            <p>Este es un párrafo de ejemplo.</p>
+                            <p>Otro párrafo con <strong>texto en negrita</strong> y <em>texto en cursiva</em>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enlace <a> -->
+            <div class="tag-card">
+                <div class="tag-header">
+                    <h2><i class="fas fa-link"></i> Enlace &lt;a&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+                        <p>Crea hipervínculos a otras páginas web, archivos, direcciones de correo o ubicaciones dentro de la misma página.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-cog"></i> Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>href</strong>: URL del recurso de destino (obligatorio)</li>
+                            <li><strong>target</strong>: Dónde abrir el enlace (_blank, _self, _parent, _top)</li>
+                            <li><strong>rel</strong>: Relación entre el documento actual y el enlace</li>
+                            <li><strong>download</strong>: Indica que el enlace es para descargar un archivo</li>
+                            <li><strong>title</strong>: Información adicional sobre el enlace</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-code"></i> Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;a href="https://ejemplo.com" target="_blank"&gt;
+    Visita nuestro sitio
+&lt;/a&gt;
+&lt;a href="mailto:info@ejemplo.com"&gt;Enviar correo&lt;/a&gt;
+&lt;a href="#seccion"&gt;Ir a sección&lt;/a&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-paint-brush"></i> CSS asociado</h3>
+                        <div class="code-example">
+                            <pre><code>a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}</code></pre>
+                        </div>
+                        <p>Estas reglas estilizan los enlaces con colores y efecto hover.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-eye"></i> Resultado visual</h3>
+                        <div class="visual-example">
+                            <p><a href="#">Visita nuestro sitio</a></p>
+                            <p><a href="#">Enviar correo</a></p>
+                            <p><a href="#">Ir a sección</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Imagen <img> -->
+            <div class="tag-card" id="multimedia">
+                <div class="tag-header">
+                    <h2><i class="fas fa-image"></i> Imagen &lt;img&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+                        <p>Inserta una imagen en el documento. Es una etiqueta auto-cerrada que no requiere etiqueta de cierre.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-cog"></i> Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>src</strong>: Ruta de la imagen (obligatorio)</li>
+                            <li><strong>alt</strong>: Texto alternativo para accesibilidad (obligatorio)</li>
+                            <li><strong>width</strong>: Ancho de la imagen en píxeles</li>
+                            <li><strong>height</strong>: Alto de la imagen en píxeles</li>
+                            <li><strong>title</strong>: Título que aparece al pasar el mouse</li>
+                            <li><strong>loading</strong>: Comportamiento de carga (lazy, eager)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-code"></i> Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen" 
+     width="400" height="300" title="Título de la imagen"&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-paint-brush"></i> CSS asociado</h3>
+                        <div class="code-example">
+                            <pre><code>img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}</code></pre>
+                        </div>
+                        <p>Estas reglas hacen las imágenes responsivas y les añaden estilos visuales.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-eye"></i> Resultado visual</h3>
+                        <div class="visual-example">
+                            <img src="https://via.placeholder.com/400x200/4361ee/ffffff?text=Imagen+de+Ejemplo" alt="Imagen de ejemplo" width="400" height="200">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- División <div> -->
+            <div class="tag-card" id="estructura">
+                <div class="tag-header">
+                    <h2><i class="fas fa-square"></i> División &lt;div&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+                        <p>Contenedor genérico que agrupa elementos para propósitos de estilo o para crear secciones en un documento. No tiene significado semántico.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-cog"></i> Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>id</strong>: Identificador único</li>
+                            <li><strong>class</strong>: Clase CSS para estilos</li>
+                            <li><strong>style</strong>: Estilos CSS en línea</li>
+                            <li><strong>data-*</strong>: Atributos personalizados para almacenar datos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-code"></i> Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;div class="contenedor"&gt;
+    &lt;h2&gt;Título de sección&lt;/h2&gt;
+    &lt;p&gt;Contenido dentro del div&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-paint-brush"></i> CSS asociado</h3>
+                        <div class="code-example">
+                            <pre><code>.contenedor {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border: 1px solid #d1e7ff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}</code></pre>
+                        </div>
+                        <p>Estas reglas aplican estilos visuales a los contenedores div.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-eye"></i> Resultado visual</h3>
+                        <div class="visual-example">
+                            <div class="example-div">
+                                <h2>Título de sección</h2>
+                                <p>Contenido dentro del div</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Span <span> -->
+            <div class="tag-card">
+                <div class="tag-header">
+                    <h2><i class="fas fa-i-cursor"></i> Span &lt;span&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+                        <p>Contenedor en línea genérico para texto o elementos en línea. Se usa para aplicar estilos a una parte de un texto sin cambiar su significado.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-cog"></i> Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>id</strong>: Identificador único</li>
+                            <li><strong>class</strong>: Clase CSS para estilos</li>
+                            <li><strong>style</strong>: Estilos CSS en línea</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-code"></i> Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;p&gt;Este es un texto con una parte 
+&lt;span class="destacado"&gt;resaltada&lt;/span&gt;.&lt;/p&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-paint-brush"></i> CSS asociado</h3>
+                        <div class="code-example">
+                            <pre><code>.destacado {
+    background-color: var(--warning-color);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+}</code></pre>
+                        </div>
+                        <p>Estas reglas resaltan visualmente el texto contenido en el span.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-eye"></i> Resultado visual</h3>
+                        <div class="visual-example">
+                            <p>Este es un texto con una parte <span class="example-span">resaltada</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lista no ordenada <ul> -->
+            <div class="tag-card" id="listas">
+                <div class="tag-header">
+                    <h2><i class="fas fa-list-ul"></i> Lista no ordenada &lt;ul&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+                        <p>Crea una lista de elementos sin un orden específico. Cada elemento de la lista se define con &lt;li&gt;.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-cog"></i> Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>id</strong>: Identificador único</li>
+                            <li><strong>class</strong>: Clase CSS para estilos</li>
+                            <li><strong>style</strong>: Estilos CSS en línea</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-code"></i> Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;ul&gt;
+    &lt;li&gt;Elemento 1&lt;/li&gt;
+    &lt;li&gt;Elemento 2&lt;/li&gt;
+    &lt;li&gt;Elemento 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-paint-brush"></i> CSS asociado</h3>
+                        <div class="code-example">
+                            <pre><code>ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}</code></pre>
+                        </div>
+                        <p>Estas reglas estilizan la lista con viñetas y espaciado.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-eye"></i> Resultado visual</h3>
+                        <div class="visual-example">
+                            <ul>
+                                <li>Elemento 1</li>
+                                <li>Elemento 2</li>
+                                <li>Elemento 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lista ordenada <ol> -->
+            <div class="tag-card">
+                <div class="tag-header">
+                    <h2><i class="fas fa-list-ol"></i> Lista ordenada &lt;ol&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+                        <p>Crea una lista numerada de elementos donde el orden es importante. Cada elemento de la lista se define con &lt;li&gt;.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-cog"></i> Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>type</strong>: Tipo de numeración (1, A, a, I, i)</li>
+                            <li><strong>start</strong>: Número inicial de la lista</li>
+                            <li><strong>reversed</strong>: Invierte el orden de numeración</li>
+                            <li><strong>id</strong>: Identificador único</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-code"></i> Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;ol type="1" start="1"&gt;
+    &lt;li&gt;Primer paso&lt;/li&gt;
+    &lt;li&gt;Segundo paso&lt;/li&gt;
+    &lt;li&gt;Tercer paso&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-paint-brush"></i> CSS asociado</h3>
+                        <div class="code-example">
+                            <pre><code>ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ol li {
+    margin-bottom: 0.5rem;
+}</code></pre>
+                        </div>
+                        <p>Estas reglas estilizan la lista numerada con espaciado adecuado.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-eye"></i> Resultado visual</h3>
+                        <div class="visual-example">
+                            <ol>
+                                <li>Primer paso</li>
+                                <li>Segundo paso</li>
+                                <li>Tercer paso</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tabla <table> -->
+            <div class="tag-card" id="tablas">
+                <div class="tag-header">
+                    <h2><i class="fas fa-table"></i> Tabla &lt;table&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+                        <p>Crea una tabla para mostrar datos tabulares. Se compone de filas (&lt;tr&gt;), celdas de encabezado (&lt;th&gt;) y celdas de datos (&lt;td&gt;).</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-cog"></i> Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>border</strong>: Ancho del borde de la tabla</li>
+                            <li><strong>cellpadding</strong>: Espacio dentro de las celdas</li>
+                            <li><strong>cellspacing</strong>: Espacio entre celdas</li>
+                            <li><strong>width</strong>: Ancho de la tabla</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-code"></i> Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Encabezado 1&lt;/th&gt;
+        &lt;th&gt;Encabezado 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Dato 1&lt;/td&gt;
+        &lt;td&gt;Dato 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-paint-brush"></i> CSS asociado</h3>
+                        <div class="code-example">
+                            <pre><code>table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}</code></pre>
+                        </div>
+                        <p>Estas reglas mejoran la apariencia y legibilidad de las tablas.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-eye"></i> Resultado visual</h3>
+                        <div class="visual-example">
+                            <table class="example-table">
+                                <tr>
+                                    <th>Encabezado 1</th>
+                                    <th>Encabezado 2</th>
+                                </tr>
+                                <tr>
+                                    <td>Dato 1</td>
+                                    <td>Dato 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Dato 3</td>
+                                    <td>Dato 4</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Formulario <form> -->
+            <div class="tag-card" id="formularios">
+                <div class="tag-header">
+                    <h2><i class="fas fa-window-restore"></i> Formulario &lt;form&gt;</h2>
+                </div>
+                <div class="tag-body">
+                    <div class="tag-section">
+                        <h3><i class="fas fa-info-circle"></i> Descripción</h3>
+                        <p>Crea un formulario para recopilar datos del usuario. Contiene elementos de entrada como campos de texto, casillas de verificación, botones, etc.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-cog"></i> Atributos comunes</h3>
+                        <ul class="attributes-list">
+                            <li><strong>action</strong>: URL donde se envían los datos del formulario</li>
+                            <li><strong>method</strong>: Método HTTP para enviar datos (GET, POST)</li>
+                            <li><strong>name</strong>: Nombre del formulario</li>
+                            <li><strong>target</strong>: Dónde mostrar la respuesta (_blank, _self)</li>
+                            <li><strong>autocomplete</strong>: Habilita/deshabilita autocompletado</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-code"></i> Ejemplo de código</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;form action="/procesar" method="post"&gt;
+    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+    &lt;input type="text" id="nombre" name="nombre"&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    
+    &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-paint-brush"></i> CSS asociado</h3>
+                        <div class="code-example">
+                            <pre><code>form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}</code></pre>
+                        </div>
+                        <p>Estas reglas mejoran la apariencia y usabilidad del formulario.</p>
+                    </div>
+                    
+                    <div class="tag-section">
+                        <h3><i class="fas fa-eye"></i> Resultado visual</h3>
+                        <div class="visual-example">
+                            <form class="example-form">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                                
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com">
+                                
+                                <button type="submit">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Guía de Etiquetas HTML - Plantilla Educativa &copy; 2023</p>
+            <p>Diseñada para facilitar el aprendizaje de HTML y CSS</p>
+        </footer>
+    </div>
+    <script src="javascript/plantilla.js"></script>
+
+</body>
+</html>
