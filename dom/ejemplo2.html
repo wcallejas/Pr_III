@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo del DOM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 2);
+            overflow: hidden;
+        }
+        header{
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr, 1fr;
+            gap: 30px;
+        }
+        .panel {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary  {background: #3498db; color: white;}
+        .btn-success {background: #27ae60; color: white;}
+        .btn-warning {background: #f39c12; color: white;}
+        .btn-danger {background: #e74c3c; color: white;}
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
+        }
+        .item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hidden {display: none;}
+        .highlight {background: #fff3cd; border-left-color: #ffc107;}
+        input, select {
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            width: 100%;
+            margin: 10px 0;
+        }
+        .stats {
+            background: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px){
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Manipulación del DOM</h1>
+            <p>Selecciona modifica y crea elementos dinámicos</p>
+        </header>
+
+        <div class="content">
+            <div class="panel">
+                <h2>Lista de Elementos</h2>
+                <div class="controls">
+                    <button class="btn-primary" onclick="agregarElemento()">Agregar Elementos</button>
+                    <button class="btn-warning" onclick="resaltarElementos()">Resaltar Pares</button>
+                    <button class="btn-danger" onclick="limpiarLista()">Limpiar Todo</button>
+                </div>
+                <div id="listaElementos">
+                    <div class="item">Elemento 1 <span class="badge">Nuevo</span></div>
+                    <div class="item">Elemento 2 <span class="badge">Nuevo</span></div>
+                    <div class="item">Elemento 3 <span class="badge">Nuevo</span></div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>Modificar Contenido</h2>
+                <input type="text" id="textoInput" placeholder="Escribe Algo Aquí...">
+                <div class="controls">
+                    <button class="btn-primary" onclick="actualizarTexto()">Actualizar Texto</button>
+                    <button class="btn-warning" onclick="cambiarEstilo()">Cambiar Estilo</button>
+                    <button class="btn-danger" onclick="toggleElemento()">Mostrar/Ocultar</button>
+                </div>
+                <div id="contenidoDinamico" style="padding: 20px; background: #e8f4f8; border-radius: 8px; margin-top: 15px;">
+                    Este Contenido puede ser modificado Dinamicamente.
+                </div>
+            </div>
+        </div>
+
+        <div class="stats" id="estadisticas">
+            Elementos en lista: <span id="contadorElementos">3</span> |
+            Última Acción: <span id="ultimaAccion">Ninguna</span>
+        </div>
+    </div>
+
+    <script>
+        let contadorElementos = 3;
+
+        //Seleccionar elementos 
+        function agregarElemento(){
+            contadorElementos++;
+            const lista = document.getElementById('listaElementos');
+            const nuevoElemento = document.createElement('div');
+            nuevoElemento.className = 'item';
+            nuevoElemento.innerHTML = `Elemento ${contadorElementos} <span class="badge">Nuevo</span>`;
+            lista.appendChild(nuevoElemento);
+            actualizarEstadisticas('Elemento Agregado');
+        }
+
+        function resaltarElementos(){
+            const elementos = document.querySelectorAll('#listaElementos .item');
+            elementos.forEach((elemento, index)=> {
+                if ((index + 1)% 2 === 0) {
+                    elemento.classList.add('highlight');
+                } else {
+                    elemento.classList.remove('highlight');
+                }
+            });
+            actualizarEstadisticas('Elementos resaltados');
+        }
+
+        function limpiarLista(){
+            const lista = document.getElementById('listaElementos');
+            lista.innerHTML = '';
+            contadorElementos = 0;
+            actualizarEstadisticas('Lista Limpiada');
+        }
+
+        function actualizarTexto(){
+            const input = document.getElementById('textoInput');
+            const contenido = document.getElementById('contenidoDinamico');
+            contenido.textContent = input.value || 'Texto actualizado Dinámicamente';
+            input.value = '';
+            actualizarEstadisticas('Texto Actualizado');
+        }
+
+        function cambiarEstilo(){
+            const contenido = document.getElementById('contenidoDinamico');
+            const colores = ['#e8f4f8','#fff3cd','#d4edda','f8d7da'];
+            const colorAleatorio = colores[Math.floor(Math.random()*colores.length)];
+            contenido.style.backgroundColor = colorAleatorio;
+            contenido.style.transform = 'scale(1.05)';
+            setTimeout(()=>{
+                contenido.style.transform = 'scale(1)';
+            }, 300);
+            actualizarEstadisticas('Estilo Cambiado');
+        }
+
+        function toggleElemento(){
+            const contenido = document.getElementById('contenidoDinamico');
+            contenido.classList.toggle('hidden');
+            actualizarEstadisticas('Elemento Mostrado/Ocultado');
+        }
+
+        function actualizarEstadisticas(accion){
+            document.getElementById('contadorElementos').textContent = contadorElementos;
+            document.getElementById('ultimaAccion').textContent = accion;
+        }
+
+        //Inicialización
+        console.log('DOM Cargado Correctamente');
+        console.log('Métodos Disponibles');
+        console.log('- agregarElemento(): Añade un nuevo elemento a la lista');
+        console.log('- resaltarElementos(): Resalta elementos pares');
+        console.log('- limpiarLista(): Elimina todos los elementos');
+        console.log('- actualizarTexto(): Actualiza contenido Dinámico');
+        console.log('- cambiarEstilo(): cambia el estilo del contenido');
+        console.log('toggleElemento(): Muestra/oculta elementos');
+    </script>
+</body>
+</html>

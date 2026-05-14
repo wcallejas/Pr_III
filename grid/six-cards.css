@@ -1,0 +1,71 @@
+.content-container {
+    display: grid;
+    grid-template-columns:  [full-start] minmax(2rem, 1fr)  
+                            [main-start] minmax(min-content, 80rem)
+                            /** Also possible: fixed 8-column layout **/
+                            /* [main-start] repeat(8, [col-start] minmax(min-content, 10rem) [col-end]) */ 
+                            [main-end]  minmax(2rem, 1fr) 
+                            [full-end]; 
+}
+
+.six-cards-wrapper {
+    grid-column: main-start / main-end;
+    margin: 5rem 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: 5rem;
+    justify-items: center;
+}
+
+.card {
+    background-color: var(--color-lavender);
+
+    display: grid;
+    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.card_avatar{
+    background-color: var(--color-creme);
+    border: 0.2em solid #ffffff;
+    border-radius: 50%;
+    width: 5em;
+    max-width: 100%;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 100;
+    justify-self: center;
+    align-self: start;
+    transform: translateY(-50%);
+}
+
+.card_image {
+    width: 100%;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}
+
+.card_feature {
+    display: flex;
+    align-items: center;
+
+    margin: 0 1em;
+    color: #ffffff
+}
+
+.card_check_icon {
+    margin-right: 0.5em;
+
+    fill: #ffffff;
+}
+
+.card_button {
+    grid-column: 1 / -1;
+
+    margin: 0 auto 2em auto;
+}

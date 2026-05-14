@@ -1,0 +1,19 @@
+.full-bleed {
+    display: grid;
+    grid-template-columns: [full-start] minmax(2rem, 1fr)
+                           [main-start] minmax(min-content, 70ch)
+                           [main-end] minmax(2rem, 1fr)
+                           [full-end];
+}
+
+.full-bleed > img {
+    grid-column: full-start / full-end;
+
+    width: 100%;
+}
+
+.full-bleed > p {
+    grid-column: main-start / main-end;
+
+    margin: 2em 0;
+}

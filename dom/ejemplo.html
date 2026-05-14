@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelado con JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mi primera página con JavaScript</h1>
+        <p id="mensaje">Haz click en los botones para ver la magía</p>
+        <button onclick="mostrarMensaje()">Saludar</button>
+        <button onclick="cambiarColor()">Cambiar Color</button>
+        <button onclick="mostrarHora()">Mostrar Hora</button>
+    </div>
+
+    <script>
+        //Función para mostrar un mensaje de Saludo 
+        function mostrarMensaje() {
+            document.getElementById('mensaje').textContent = "Hola Mundo, Desde JavaScript";
+            document.getElementById('mensaje').style.color = 'green';
+        }
+        //Función para cambiar el color del mensaje
+        function cambiarColor() {
+            const colores = ['red','blue','purple','orange','brown'];
+            const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+            document.getElementById('mensaje').style.color = colorAleatorio;
+        }
+        //Función para mostrar la hora actual 
+        function mostrarHora(){
+            const ahora = new Date();
+            const hora = ahora.toLocaleTimeString();
+            document.getElementById('mensaje').textContent = `Hora Actual: ${hora}`;
+            document.getElementById('mensaje').style.color = 'black';
+        }
+
+        //Mensaje para mostrar en consola
+        console.log('¡Página Cargada Correctamente!');
+        console.log('Abre la consola del navegador presionando F12 para ver este mensaje');
+
+    </script>
+</body>
+</html>
